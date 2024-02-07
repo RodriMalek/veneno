@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 95vw;
+            height: 95vh;
+            display: grid;
+            place-items: center;
+            background-color: black;
+            color: aliceblue;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        #lienzo {
+            box-shadow: 0px 0px 20px 5px red;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .left, .right {
+            height: 50;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .btn {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: black;
+            color: pink;
+            font-weight: bold;
+            border: 10px solid red;
+            margin: 20px; 
+        }
+
+        .btn:active {
+            background-color: orangered;
+        }
+        #results {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+           <button class="btn" onclick="left()">Left</button>
+           <button class="btn" onclick="right()">Right</button> 
+        </div>
+        <div id="results">
+        <div class="center">
+            <h1>SNAKE JAVA</h1>
+                <h3>Puntos <span id="puntos"></span></h3>
+                <h3>Max: <span id="max"></span></h3>
+            </div>
+            <canvas id="lienzo" width="500" height="300"></canvas>
+        </div>
+            <div class="right">
+                <button class="btn" onclick="up()">Up</button>
+                <button class="btn" onclick="down()">Down</button>
+            </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
+
+
